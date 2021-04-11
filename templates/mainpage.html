@@ -1,0 +1,88 @@
+
+<html>
+  <head>
+    <style>
+      body{
+        background-color: #3f3434;
+        font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+      }
+       div{
+        border-left-style: solid;
+        background-color: #bfbfbf;
+        border-left-width: 5px;
+        border-color: #ff9900;
+        border-left-style: solid;
+        padding: 15px;
+        box-shadow: 2px 2px 30px #1a1a1a;
+        background-color: #bfbfbf;
+        text-align: center;
+      }
+      h1{
+        color: #f2f2f2;
+        text-align: center;
+      }
+      input[type=text]{
+        text-align: center;
+        width: 200px;
+        height: 30px;
+        border: 0px;
+      }
+      input[type=submit]{
+        background-color: #0672ec;
+        width: 90px;
+        height: 30px;
+        border: 0px;
+      }
+      td{
+        color: #361717;
+      }
+      td.heading{
+        width: 50px;
+      }
+    </style>
+    <title>Boston Housing Project</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <h1>Boston Housing Prices Predictor</h1>
+    <div>
+        <table style="width:50%; float:left;">
+        <tr><td class = "heading">CRIM :</td><td>per capita crime rate by town</td></tr>
+        <tr><td class = "heading">ZN :</td><td>proportion of residential land zoned for lots over 25,000 sq.ft.</td></tr><br>
+        <tr><td class = "heading">INDUS :</td><td>proportion of non-retail business acres per town</td></tr><br>
+        <tr><td class = "heading">CHAS :</td><td>Charles River dummy variable (= 1 if tract bounds river; 0 otherwise)</td></tr><br>
+        <tr><td class = "heading">NOX :</td><td>nitric oxides concentration (parts per 10 million)</td></tr><br>
+        <tr><td class = "heading">RM :</td><td>average number of rooms per dwelling</td></tr><br>
+        <tr><td class = "heading">AGE :</td><td>proportion of owner-occupied units built prior to 1940</td></tr><br>
+        <tr><td class = "heading">DIS :</td><td>weighted distances to five Boston employment centres</td></tr><br>
+        <tr><td class = "heading">RAD :</td><td>index of accessibility to radial highways</td></tr><br>
+        <tr><td class = "heading">TAX :</td><td>full-value property-tax rate per $10,000</td></tr><br>
+        <tr><td class = "heading">PTRATIO:</td><td>pupil-teacher ratio by town</td></tr><br>
+        <tr><td class = "heading">B :</td><td>1000(Bk - 0.63)^2 where Bk is the proportion of blacks by town</td></tr><br>
+        <tr><td class = "heading">LSTAT :</td><td>%age lower status of the population</td></tr><br>
+        </table>
+        <form action="/predict" method="POST">
+        Enter the following values to predict value of houses<br>
+        <input type="text" name="CRIM" placeholder="CRIM" autofocus required>
+        <input type="text" name="ZN" placeholder="ZN" autofocus required>
+        <input type="text" name="INDUS" placeholder="INDUS" required><br><br>
+        <input type="text" name="CHAS" placeholder="CHAS" required>
+        <input type="text" name="NOX" placeholder="NOX" required>
+        <input type="text" name="RM" placeholder="RM" required><br><br>
+        <input type="text" name="AGE" placeholder="AGE" required>
+        <input type="text" name="DIS" placeholder="DIS" required>
+        <input type="text" name="RAD" placeholder="RAD" required><br><br>
+        <input type="text" name="TAX" placeholder="TAX" required>
+        <input type="text" name="PTRATIO" placeholder="PT RATIO" required>
+        <input type="text" name="B" placeholder="B" required><br><br>
+        <input type="text" name="LSTAT" placeholder="L STAT" required><BR><BR>
+        <input type="submit" value="Predict">
+        <br><br><br>
+        </form>
+        <br><br>
+      {{prediction_text}}
+      </div>
+      
+</body>
+</html>
