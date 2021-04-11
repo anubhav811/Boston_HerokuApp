@@ -3,7 +3,7 @@ from joblib import dump, load
 import numpy as np
 from flask import Flask, request,render_template
 import sys
-app = Flask("Boston_Predictor")
+app = Flask("boston-prices-predictor")
 app.config['DEBUG'] = True
 
 model = load('Boston.joblib')
