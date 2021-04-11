@@ -44,20 +44,20 @@
     <h1>Boston Housing Prices Predictor</h1>
     <div>
         <table style="width:50%; float:left;">
-        <tr><td class = "heading">CRIM :</td><td>per capita crime rate by town</td></tr>
-        <tr><td class = "heading">ZN :</td><td>proportion of residential land zoned for lots over 25,000 sq.ft.</td></tr><br>
-        <tr><td class = "heading">INDUS :</td><td>proportion of non-retail business acres per town</td></tr><br>
-        <tr><td class = "heading">CHAS :</td><td>Charles River dummy variable (= 1 if tract bounds river; 0 otherwise)</td></tr><br>
-        <tr><td class = "heading">NOX :</td><td>nitric oxides concentration (parts per 10 million)</td></tr><br>
-        <tr><td class = "heading">RM :</td><td>average number of rooms per dwelling</td></tr><br>
-        <tr><td class = "heading">AGE :</td><td>proportion of owner-occupied units built prior to 1940</td></tr><br>
-        <tr><td class = "heading">DIS :</td><td>weighted distances to five Boston employment centres</td></tr><br>
-        <tr><td class = "heading">RAD :</td><td>index of accessibility to radial highways</td></tr><br>
-        <tr><td class = "heading">TAX :</td><td>full-value property-tax rate per $10,000</td></tr><br>
-        <tr><td class = "heading">PTRATIO:</td><td>pupil-teacher ratio by town</td></tr><br>
-        <tr><td class = "heading">B :</td><td>1000(Bk - 0.63)^2 where Bk is the proportion of blacks by town</td></tr><br>
-        <tr><td class = "heading">LSTAT :</td><td>%age lower status of the population</td></tr><br>
-        </table>
+        <tr><td class = "heading">CRIM :per capita crime rate by town</td></tr>
+        <tr><td class = "heading">ZN :proportion of residential land zoned for lots over 25,000 sq.ft.</td></tr>
+        <tr><td class = "heading">INDUS :proportion of non-retail business acres per town</td></tr>
+        <tr><td class = "heading">CHAS :Charles River dummy variable (= 1 if tract bounds river; 0 otherwise)</td></tr>
+        <tr><td class = "heading">NOX :nitric oxides concentration (parts per 10 million)</td></tr>
+        <tr><td class = "heading">RM :average number of rooms per dwelling</td></tr>
+        <tr><td class = "heading">AGE :proportion of owner-occupied units built prior to 1940</td></tr>
+        <tr><td class = "heading">DIS :weighted distances to five Boston employment centres</td></tr>
+        <tr><td class = "heading">RAD :index of accessibility to radial highways</td></tr>
+        <tr><td class = "heading">TAX :full-value property-tax rate per $10,000</td></tr>
+        <tr><td class = "heading">PTRATIO:pupil-teacher ratio by town</td></tr>
+        <tr><td class = "heading">B :1000(Bk - 0.63)^2 where Bk is the proportion of blacks by town</td></tr>
+        <tr><td class = "heading">LSTAT :%age lower status of the population</td></tr>
+        </table> 
         <form action="/predict" method="POST">
         Enter the following values to predict value of houses<br>
         <input type="text" name="CRIM" placeholder="CRIM" autofocus required>
