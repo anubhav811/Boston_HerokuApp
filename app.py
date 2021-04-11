@@ -12,7 +12,7 @@ model = load('Boston.joblib')
 def home():
     return render_template('mainpage.html')
     
-@app.route('/predict',methods=['POST'])
+@app.route('/predict',methods=['POST','GET'])
 def predict():
     features = [int(x) for x in request.form.values()]
     final_features = [np.array(features)]
